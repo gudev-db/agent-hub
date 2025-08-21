@@ -1,9 +1,10 @@
 import streamlit as st
+import os
 
 # Configuração da página
 st.set_page_config(
     page_title="Hub de Agentes Macfor",
-    page_icon="🚀",
+    page_icon="assets/page-icon.png",
     layout="centered"
 )
 
@@ -44,11 +45,23 @@ st.markdown("""
         background-color: #005582;
         color: white;
     }
+    .logo-container {
+        text-align: center;
+        margin-bottom: 1rem;
+    }
 </style>
 """, unsafe_allow_html=True)
 
+# Logo da Macfor (da pasta assets)
+if os.path.exists("assets/macLogo.png"):
+    st.markdown('<div class="logo-container">', unsafe_allow_html=True)
+    st.image("assets/macLogo.png", width=200)
+    st.markdown('</div>', unsafe_allow_html=True)
+else:
+    st.markdown('<div class="header"><h1>🚀 Hub de Agentes Macfor</h1></div>', unsafe_allow_html=True)
+
 # Cabeçalho
-st.markdown('<div class="header"><h1>🚀 Hub de Agentes Macfor</h1><p>Central de acesso aos agentes especializados</p></div>', unsafe_allow_html=True)
+st.markdown('<div class="header"><h2>Central de acesso aos agentes especializados</h2></div>', unsafe_allow_html=True)
 
 # Agentes
 agents = [
@@ -65,14 +78,14 @@ agents = [
         "icon": "🌸"
     },
     {
-        "name": "Agente Positivo Empresas",
-        "description": "Agente especializado em Positivo Empresas",
+        "name": "Positivo Empresas",
+        "description": "Agente especializado em soluções empresariais Positivo",
         "url": "https://agente-positivo-empresas.streamlit.app/",
         "icon": "🏢"
     },
     {
-        "name": "Agente Positivo Tecnologia",
-        "description": "Agente especializado em Positivo Tecnologia",
+        "name": "Positivo Tecnologia",
+        "description": "Agente especializado em soluções técnicas Positivo",
         "url": "https://agente-positivo-tec.streamlit.app/",
         "icon": "💻"
     }
