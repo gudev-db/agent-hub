@@ -32,17 +32,25 @@ agents = [
     },
     {
         "name": "Positivo Empresas",
-        "description": "Agente especializado em soluções empresariais Positivo",
+        "description": "Agente especializado em Positivo empresas",
         "url": "https://agente-positivo-empresas.streamlit.app/",
         "icon": "🏢"
     },
     {
         "name": "Positivo Tecnologia",
-        "description": "Agente especializado em soluções técnicas Positivo",
+        "description": "Agente especializado em Positivo Tecnologia",
         "url": "https://agente-positivo-tec.streamlit.app/",
         "icon": "💻"
     }
+    ,
+    {
+        "name": "Eurochem",
+        "description": "Agente especializado em Eurochem",
+        "url": "https://agente-eurochem.streamlit.app/",
+        "icon": "💻"
+    }
 ]
+
 
 # Exibir agentes de forma simples
 for agent in agents:
